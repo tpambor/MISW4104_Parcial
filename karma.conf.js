@@ -37,6 +37,7 @@ module.exports = function (config) {
     reporters: ['mocha', 'kjhtml'],
     browsers: ['ChromeHeadlessNoSandbox'],
     restartOnFileChange: true,
+    singleRun: true,
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
         base: 'ChromeHeadless',
