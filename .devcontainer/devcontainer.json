@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/devcontainer.json
+{
+  "name": "MISW4104",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "github.vscode-pull-request-github",
+        "mhutchie.git-graph",
+        "johnpapa.angular-essentials",
+        "alexiv.vscode-angular2-files"
+      ],
+      // Set *default* container specific settings.json values on container create.
+      "settings": {
+        "workbench.iconTheme": "material-icon-theme"
+      }
+    }
+  },
+  "postCreateCommand": "sudo chown -R node:node . && (git ls-files -z | xargs -0 dos2unix) && git add . && git reset && npm install",
+  "remoteEnv": {
+    "PATH": "${containerWorkspaceFolder}/node_modules/.bin:/opt/sonar-scanner-4.8.0.2856/bin:${containerEnv:PATH}"
+  },
+  "forwardPorts": [4200]
+}
