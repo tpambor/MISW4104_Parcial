@@ -1,0 +1,22 @@
+main {
+  flex: 1;
+}
+
+header h1 {
+  font-family: 'Indie Flower', sans-serif;
+}
+
+.hero img {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: var(--bs-body-color);
+  text-decoration: none;
+}
