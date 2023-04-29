@@ -1,3 +1,12 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+/* indie-flower-regular - latin */
+@font-face {
+  font-display: block;
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/indie-flower-v17-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('assets/indie-flower-v17-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
