@@ -32,3 +32,9 @@
 :root {
   --bs-font-sans-serif: 'Inter', sans-serif;
 }
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
