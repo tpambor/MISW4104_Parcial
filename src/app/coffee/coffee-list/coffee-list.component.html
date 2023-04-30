@@ -1,3 +1,23 @@
-<p>
-  coffee-list works!
-</p>
+<div class="row mt-4">
+  <div class="col">
+    <table class="table">
+      <caption>Variedades de café</caption>
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Región</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let coffee of coffees">
+        <tr>
+          <th scope="row">{{ coffee.id }}</th>
+          <td>{{ coffee.nombre }}</td>
+          <td>{{ coffee.tipo }}</td>
+          <td>{{ coffee.region }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
