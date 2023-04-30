@@ -54,4 +54,26 @@ describe('CoffeeListComponent', () => {
       expect(fields[2].nativeElement.textContent).toBe(mockCoffeeService.coffeeData[i].region);
     }
   });
+
+  it(`should contain the number of coffees of type 'Café de Origen'`, () => {
+    let total = 0;
+    for (const coffee of mockCoffeeService.coffeeData) {
+      if (coffee.tipo === 'Café de Origen')
+        total++;
+    }
+
+    const origen = fixture.debugElement.query(By.css('[data-testid="coffee-total-origen"]'));
+    expect(origen.nativeElement.textContent).toBe(String(total));
+  });
+
+  it(`should contain the number of coffees of type 'Blend'`, () => {
+    let total = 0;
+    for (const coffee of mockCoffeeService.coffeeData) {
+      if (coffee.tipo === 'Blend')
+        total++;
+    }
+
+    const blend = fixture.debugElement.query(By.css('[data-testid="coffee-total-blend"]'));
+    expect(blend.nativeElement.textContent).toBe(String(total));
+  });
 });

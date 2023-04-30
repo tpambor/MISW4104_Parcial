@@ -10,8 +10,8 @@
           <th scope="col">Región</th>
         </tr>
       </thead>
-      <tbody *ngFor="let coffee of coffees">
-        <tr>
+      <tbody>
+        <tr *ngFor="let coffee of coffees">
           <th scope="row">{{ coffee.id }}</th>
           <td>{{ coffee.nombre }}</td>
           <td>{{ coffee.tipo }}</td>
@@ -19,5 +19,11 @@
         </tr>
       </tbody>
     </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p class="mb-0">Total café de origen: <span data-testid="coffee-total-origen">{{ totalPerType['Café de Origen'] || 0 }}</span></p>
+    <p class="mb-0">Total café blend: <span data-testid="coffee-total-blend">{{ totalPerType['Blend'] || 0 }}</span></p>
   </div>
 </div>
